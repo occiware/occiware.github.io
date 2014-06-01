@@ -19,6 +19,8 @@ It is built on 3 pillars:
 * a [deployment framework]({{ BASE_PATH }}/implementation.html) based on
   [erocci](http://jeanparpaillon.github.com/erocci)
 
+Some OCCI models are also [presented here]({{ BASE_PATH }}/models.html).
+
 # OCCIware big picture
 
 ![OCCIware big picture]({{ site.url }}/assets/img/OCCIware-big-picture.jpg)

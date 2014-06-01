@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="ASCII"?>
+<OCCI:Extension xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:OCCI="http://schemas.ogf.org/occi" xsi:schemaLocation="http://schemas.ogf.org/occi OCCI.ecore" name="OCNI">
+  <kind term="entity" scheme="http://schemas.ogf.org/occi/core#" title="Entity type">
+    <attribute name="occi.core.type" type="string" mutable="true"/>
+  </kind>
+  <kind term="resource" scheme="http://schemas.ogf.org/occi/core#" title="Resource type" parent="//@kind[term='entity']">
+    <attribute name="occi.core.summary" type="string" mutable="true"/>
+  </kind>
+  <kind term="link" scheme="http://schemas.ogf.org/occi/core#" title="Link type" parent="//@kind[term='entity']"/>
+  <kind term="network" scheme="http://schemas.ogf.org/occi/infrastructure#" title="Network type" parent="//@kind[term='resource']">
+    <attribute name="occi.network.vlan" type="integer 0-4096" mutable="true"/>
+    <attribute name="occi.network.label" type="Token" mutable="true"/>
+    <attribute name="occi.network.state" type="enum {active, inactive}" required="true"/>
+    <action term="up" scheme="http://schemas.ogf.org/occi/infrastructure/network/action#"/>
+    <action term="down" scheme="http://schemas.ogf.org/occi/infrastructure/network/action#"/>
+  </kind>
+  <kind term="networkinterface" scheme="http://schemas.ogf.org/occi/infrastructure#" title="NetworkInterface type" parent="//@kind[term='link']">
+    <attribute name="occi.networkinterface.interface" type="string" required="true"/>
+    <attribute name="occi.networkinterface.mac" type="string" mutable="true" required="true"/>
+    <attribute name="occi.networkinterface.state" type="enum {active, inactive}" required="true"/>
+  </kind>
+  <kind term="CloNeNode" scheme="http://ocni.org/ocni#" parent="//@kind[term='network']">
+    <attribute name="availability" type="string"/>
+    <attribute name="location" type="string"/>
+  </kind>
+  <kind term="CloNeLink" scheme="http://ocni.org/ocni#" parent="//@kind[term='network']">
+    <attribute name="availability" type="string"/>
+    <attribute name="bandwidth" type="string"/>
+    <attribute name="latency" type="string"/>
+    <attribute name="jitter" type="string"/>
+    <attribute name="loss" type="string"/>
+    <attribute name="routing_scheme" type="string"/>
+  </kind>
+  <kind term="FNS" scheme="http://ocni.org/ocni#" parent="//@kind[term='network']">
+    <attribute name="availability" type="string"/>
+  </kind>
+  <kind term="FNSComLink" scheme="http://ocni.org/ocni#" parent="//@kind[term='networkinterface']">
+    <attribute name="availability" type="string"/>
+  </kind>
+  <kind term="CloneLinkComLink" scheme="http://ocni.org/ocni#" parent="//@kind[term='networkinterface']">
+    <attribute name="availability" type="string"/>
+  </kind>
+  <kind term="CloNeNetworkInterface" scheme="http://ocni.org/ocni#" parent="//@kind[term='NetNetLink']">
+    <attribute name="availability" type="string"/>
+    <attribute name="attribute0" type="string"/>
+    <attribute name="state" type="string"/>
+  </kind>
+  <kind term="NetNetLink" scheme="http://ocni.org/ocni#" parent="//@kind[term='link']">
+    <attribute name="availability" type="string"/>
+    <attribute name="state" type="string"/>
+  </kind>
+  <kind term="StorStorLink" scheme="http://ocni.org/ocni#" parent="//@kind[term='link']">
+    <attribute name="availability" type="string"/>
+    <attribute name="state" type="string"/>
+  </kind>
+  <kind term="NetStorLink" scheme="http://ocni.org/ocni#" parent="//@kind[term='link']">
+    <attribute name="availability" type="string"/>
+    <attribute name="state" type="string"/>
+  </kind>
+  <kind term="ComComLink" scheme="http://ocni.org/ocni#" parent="//@kind[term='link']">
+    <attribute name="availability" type="string"/>
+    <attribute name="state" type="string"/>
+  </kind>
+  <kind term="CloNeNodeComLink" scheme="http://ocni.org/ocni#" parent="//@kind[term='networkinterface']">
+    <attribute name="availability" type="string"/>
+  </kind>
+</OCCI:Extension>

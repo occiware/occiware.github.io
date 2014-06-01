@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OCCI:Extension xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:OCCI="http://schemas.ogf.org/occi" xsi:schemaLocation="http://schemas.ogf.org/occi OCCI.ecore" name="Platform">
+  <kind term="entity" scheme="http://schemas.ogf.org/occi/core#" title="Entity type">
+    <attribute name="occi.core.type" type="string" mutable="true"/>
+  </kind>
+  <kind term="resource" scheme="http://schemas.ogf.org/occi/core#" title="Resource type" parent="//@kind[term='entity']">
+    <attribute name="occi.core.summary" type="string" mutable="true"/>
+  </kind>
+  <kind term="link" scheme="http://schemas.ogf.org/occi/core#" title="Link type" parent="//@kind[term='entity']"/>
+  <kind term="container" scheme="http://schemas.ogf.org/occi/platform#" title="Service Container Resource" parent="//@kind[term='resource']">
+    <attribute name="occi.container.name" type="string" mutable="true" description="Container instance name"/>
+    <attribute name="occi.container.version" type="string" mutable="true" description="Version label of the instance"/>
+    <attribute name="occi.container.architecture" type="enum {x86, x86_64, armv7}" mutable="true" default="x86" description="CPU architecture of the instance"/>
+    <attribute name="occi.container.state" type="enum {unavailable, started, stopped}" default="unavailable" description="current state of the instance"/>
+    <action term="start" scheme="http://schemas.ogf.org/occi/platform/container/action#" title="start the instance"/>
+    <action term="stop" scheme="http://schemas.ogf.org/occi/platform/container/action#" title="stop the instance"/>
+    <action term="restart" scheme="http://schemas.ogf.org/occi/platform/container/action#" title="restart the instance"/>
+    <action term="suspend" scheme="http://schemas.ogf.org/occi/platform/container/action#" title="suspend the instance"/>
+  </kind>
+  <kind term="database" scheme="http://schemas.ogf.org/occi/platform#" title="Database Resource" parent="//@kind[term='resource']">
+    <attribute name="occi.database.name" type="string" mutable="true" description="Database instance name"/>
+    <attribute name="occi.database.type" type="string" mutable="true" default="sql" description="Scheme type of the instance"/>
+    <attribute name="occi.database.architecture" type="enum {x86, x86_64, armv7}" mutable="true" default="x86" description="CPU architecture of the instance"/>
+    <attribute name="occi.database.version" type="string" mutable="true" description="Version label of the instance"/>
+    <attribute name="occi.database.state" type="enum {unavailable, available}" default="unavailable" description="current state of the instance"/>
+    <action term="start" scheme="http://schemas.ogf.org/occi/platform/database/action#" title="start the instance"/>
+    <action term="stop" scheme="http://schemas.ogf.org/occi/platform/database/action#" title="stop the instance"/>
+    <action term="restart" scheme="http://schemas.ogf.org/occi/platform/database/action#" title="restart the instance"/>
+    <action term="backup" scheme="http://schemas.ogf.org/occi/platform/database/action#" title="buckup the instance"/>
+    <action term="snapshot" scheme="http://schemas.ogf.org/occi/platform/database/action#" title="snapshot the instance"/>
+  </kind>
+  <kind term="router" scheme="http://schemas.ogf.org/occi/platform#" title="Router Resource" parent="//@kind[term='resource']">
+    <attribute name="occi.router.name" type="string" mutable="true" description="Router instance name"/>
+    <attribute name="occi.router.version" type="string" mutable="true" description="version label of the instance"/>
+    <attribute name="occi.router.architecture" type="enum {x86, x86_64, armv7}" mutable="true" default="x86" description="CPU architecture of the instance"/>
+    <attribute name="occi.router.state" type="enum {disabled}" default="disabled" description="current state of the instance"/>
+    <action term="configure" scheme="http://schemas.ogf.org/occi/platform/action#" title="configure the instance">
+      <attribute name="config" type="string" description="Router config"/>
+    </action>
+    <action term="enable" scheme="http://schemas.ogf.org/occi/platform/action#" title="enable the instance"/>
+    <action term="disable" scheme="http://schemas.ogf.org/occi/platform/action#" title="disable the instance"/>
+  </kind>
+  <kind term="databaselink" scheme="http://schemas.ogf.org/occi/platform#" title="DatabaseLink Link" parent="//@kind[term='link']">
+    <attribute name="occi.databaselink.state" type="enum {inactive, active}" default="inactive"/>
+  </kind>
+  <kind term="routerlink" scheme="http://schemas.ogf.org/occi/platform#" title="RouterLink Link" parent="//@kind[term='link']">
+    <attribute name="occi.routerlink.state" type="enum {inactive, active}" default="inactive" description="current state of the instance"/>
+  </kind>
+  <kind term="containerlink" scheme="http://schemas.ogf.org/occi/platform#" title="ContainerLink Link" parent="//@kind[term='link']">
+    <attribute name="occi.containerlink.state" type="enum {inactive, active}" default="inactive" description="current state of the instance"/>
+  </kind>
+  <mixin term="microcontainer" scheme="http://schemas.ogf.org/occi/platform/container#" title="Micro Container Mixin" applies="//@kind[term='container']">
+    <attribute name="occi.microcontainer.file" type="string" mutable="true" description="MicroContainer instance name"/>
+    <attribute name="occi.microcontainer.requirements" type="string" mutable="true" description="List of requirements needed to run the MC (e.g. JRE version, start command, etc.)"/>
+    <attribute name="occi.microcontainer.state" type="enum {started, stopped}" mutable="true" default="stopped" description="current state of the instance"/>
+    <action term="monitor" scheme="http://schemas.ogf.org/occi/platform/action#" title="monitor the instance">
+      <attribute name="monitoring" type="string" description="Monitoring data"/>
+    </action>
+    <action term="migrate" scheme="http://schemas.ogf.org/occi/platform/action#" title="migrate the instance">
+      <attribute name="migration" type="string" description="host address"/>
+    </action>
+  </mixin>
+</OCCI:Extension>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OCCI:Extension xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:OCCI="http://schemas.ogf.org/occi" xsi:schemaLocation="http://schemas.ogf.org/occi OCCI.ecore" name="Application">
+  <kind term="entity" scheme="http://schemas.ogf.org/occi/core#" title="Entity type">
+    <attribute name="occi.core.type" type="string" mutable="true"/>
+  </kind>
+  <kind term="resource" scheme="http://schemas.ogf.org/occi/core#" title="Resource type" parent="//@kind[term='entity']">
+    <attribute name="occi.core.summary" type="string" mutable="true"/>
+  </kind>
+  <kind term="link" scheme="http://schemas.ogf.org/occi/core#" title="Link type" parent="//@kind[term='entity']"/>
+  <kind term="environment" scheme="http://schemas.ogf.org/occi/application#" title="Environment Resource" parent="//@kind[term='resource']">
+    <attribute name="occi.environment.name" type="string" mutable="true" description="Environment instance name"/>
+    <attribute name="occi.environment.description" type="string" mutable="true" description="Human readable description of the instance"/>
+    <attribute name="occi.environment.memory" type="float" mutable="true" description="RAM allocated to the instance"/>
+    <attribute name="occi.environment.variables" type="string" mutable="true" description="Environment variables associated to the instance"/>
+    <attribute name="occi.environment.containerlist" type="container" mutable="true" description="Set of URIs of Container instances associated to the instance"/>
+    <attribute name="occi.environment.routerlist" type="router" mutable="true" description="Set of URIs of Router instances associated to the instance"/>
+    <attribute name="occi.environment.databaseslink" type="databaselink" mutable="true" description="Set of URIs of Database instances associated to the instance"/>
+    <attribute name="occi.evironment.state" type="string" default="inactive" description="Current state of the instance"/>
+    <action term="update" scheme="http://schemas.ogf.org/occi/application/environment/action#" title="Update Environment context">
+      <attribute name="context" type="occi:environment" description="New environment context"/>
+    </action>
+  </kind>
+  <kind term="application" scheme="http://schemas.ogf.org/occi/application#" title="Application Resource" parent="//@kind[term='resource']">
+    <attribute name="occi.application.name" type="string" mutable="true" description="Application instance name"/>
+    <attribute name="occi.application.description" type="string" mutable="true" description="Human readable description of the instance"/>
+    <attribute name="occi.application.instances" type="integer" mutable="true" description="Number of the instance copies"/>
+    <attribute name="occi.application.url" type="URL" mutable="true" description="The public URL associated to the instance"/>
+    <attribute name="occi.application.deployables" type="deployable" mutable="true" description="Set of URIs of Deployable instances associated to the instance"/>
+    <attribute name="occi.application.state" type="string" default="stopped" description="Current state of the instance"/>
+    <action term="start" scheme="http://schemas.ogf.org/occi/application/application/action#" title="Start the instance"/>
+    <action term="stop" scheme="http://schemas.ogf.org/occi/application/application/action#" title="Stop the instance"/>
+    <action term="restart" scheme="http://schemas.ogf.org/occi/application/application/action#" title="Restart the instance"/>
+    <action term="update" scheme="http://schemas.ogf.org/occi/application/application/action#" title="Update the instance">
+      <attribute name="context" type="occi:application" description="New application context"/>
+    </action>
+  </kind>
+  <kind term="deployable" scheme="http://schemas.ogf.org/occi/application#" title="Deployable Resource" parent="//@kind[term='resource']">
+    <attribute name="occi.deployable.name" type="string" mutable="true" description="Application instance name"/>
+    <attribute name="occi.deployable.description" type="string" mutable="true" description="Human readable description of the instance"/>
+    <attribute name="occi.deployable.contenttype" type="string" mutable="true" description="Archives type of the instance"/>
+    <attribute name="occi.deployable.location" type="xs:anyURI" mutable="true" description="Location of the artifact associated to the instance_can be a file path or a logical Name"/>
+    <attribute name="occi.deployable.state" type="enum {available}" default="available" description="current state of the instance"/>
+    <action term="update" scheme="http://schemas.ogf.org/occi/application/deployable/action#" title="Update the instance">
+      <attribute name="deployable" type="occi:deployable" description="New instance context"/>
+    </action>
+  </kind>
+  <kind term="environmentlink" scheme="http://schemas.ogf.org/occi/application#" title="EnvironmentLink Link" parent="//@kind[term='link']">
+    <attribute name="occi.environmentlink.state" type="enum {active}" default="active" description="Current state of the instance"/>
+  </kind>
+</OCCI:Extension>
