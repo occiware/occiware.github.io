@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<alloy>
+
+<view>
+
+<defaultnode/>
+
+<defaultedge/>
+
+<node>
+   <type name="Category"/>
+   <type name="entity"/>
+   <type name="false"/>
+   <type name="Link"/>
+   <type name="link"/>
+   <type name="occi_core_summary"/>
+   <type name="occi_core_title"/>
+   <type name="Resource"/>
+   <type name="resource"/>
+   <type name="true"/>
+   <type name="univ"/>
+   <type name="ordering/Ord"/>
+   <type name="seq/Int"/>
+   <set name="this/URI" type="String"/>
+</node>
+
+<node color="Blue">
+   <type name="Kind"/>
+</node>
+
+<node color="Gray">
+   <type name="Entity"/>
+</node>
+
+<node color="Green">
+   <type name="Action"/>
+</node>
+
+<node color="Red">
+   <type name="Attribute"/>
+</node>
+
+<node color="Yellow">
+   <type name="Mixin"/>
+</node>
+
+<node visible="no">
+   <type name="Boolean"/>
+   <type name="Int"/>
+   <type name="String"/>
+</node>
+
+<edge constraint="no">
+   <relation name="entities"> <type name="Kind"/> <type name="Entity"/> </relation>
+</edge>
+
+<edge layout="yes">
+   <relation name="parent"> <type name="Kind"/> <type name="Kind"/> </relation>
+   <relation name="source"> <type name="Link"/> <type name="Resource"/> </relation>
+   <relation name="target"> <type name="Link"/> <type name="Resource"/> </relation>
+</edge>
+
+<edge layout="yes" constraint="no">
+   <relation name="kind"> <type name="Entity"/> <type name="Kind"/> </relation>
+</edge>
+
+<edge visible="no" attribute="yes">
+   <relation name="default"> <type name="Attribute"/> <type name="String"/> </relation>
+   <relation name="description"> <type name="Attribute"/> <type name="String"/> </relation>
+   <relation name="id"> <type name="Entity"/> <type name="String"/> </relation>
+   <relation name="mutable"> <type name="Attribute"/> <type name="Boolean"/> </relation>
+   <relation name="name"> <type name="Attribute"/> <type name="String"/> </relation>
+   <relation name="required"> <type name="Attribute"/> <type name="Boolean"/> </relation>
+   <relation name="scheme"> <type name="Category"/> <type name="String"/> </relation>
+   <relation name="term"> <type name="Category"/> <type name="String"/> </relation>
+   <relation name="title"> <type name="Category"/> <type name="String"/> </relation>
+   <relation name="type"> <type name="Attribute"/> <type name="String"/> </relation>
+</edge>
+
+</view>
+
+</alloy>
