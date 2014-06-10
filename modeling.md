@@ -5,14 +5,17 @@ description: "A modeling environment for OCCI"
 ---
 {% include JB/setup %}
 
-# DSML
+# A metamodel for OCCI
 
-* [ecore diag OCCI representation]({{ BASE_PATH }}/assets/EMF/OCCI.ecorediag)
+![Ecore metamodel for OCCI]({{ BASE_PATH }}/assets/img/OCCI-Ecore.jpg)
 
-# EMF Models
+* [OCCI.ecore]({{ BASE_PATH }}/assets/EMF/OCCI.ecore)
+* [OCCI.ecorediag]({{ BASE_PATH }}/assets/EMF/OCCI.ecorediag)
+
+# Five OCCI models
 
 * [OCCI Core]({{ BASE_PATH }}/assets/EMF/Core.occi)
 * [OCCI Infrastructure]({{ BASE_PATH }}/assets/EMF/Infrastructure.occi)
-* [OCCI Application]({{ BASE_PATH }}/assets/EMF/Platform.occi)
 * [OCCI Platform]({{ BASE_PATH }}/assets/EMF/Platform.occi)
+* [OCCI Application]({{ BASE_PATH }}/assets/EMF/Platform.occi)
 * [OCCI Network]({{ BASE_PATH }}/assets/EMF/OCNI.occi)
