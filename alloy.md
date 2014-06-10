@@ -9,13 +9,13 @@ description: "A formal specification of OCCI with Alloy"
 
 Following figure gives an informal overview of the OCCI Core Model.
 
-![Informal OCCI Core Model]({{ BASE_PATH }}/assets/img/occi-core-model-12.png)
+![Informal OCCI Core Model]({{ BASE_PATH }}/assets/img/occi-core-model-12.jpg)
 
 # A formal specification of OCCI with Alloy
 
-A formal specification of the OCCI Core Model with [Alloy](http://alloy.mit.edu/alloy/) is available [here]({{ BASE_PATH }}/assets/Alloy/occi-core.als).
+A formal specification of the OCCI Core Model with [Alloy](http://alloy.mit.edu/alloy/) is available [here]({{ BASE_PATH }}/assets/Alloy/occi_core.als).
 
-A specific Alloy theme is provided [here]({{ BASE_PATH }}/assets/Alloy/occi-core.thm) to visualize OCCI Core instances.
+A specific Alloy theme is provided [here]({{ BASE_PATH }}/assets/Alloy/occi_core.thm) to visualize OCCI Core instances.
 
 # The OCCI Core Type System
 
