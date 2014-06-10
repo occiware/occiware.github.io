@@ -7,7 +7,7 @@ description: "A modeling environment for OCCI"
 
 # A metamodel for OCCI
 
-![Ecore metamodel for OCCI]({{ BASE_PATH }}/assets/img/OCCI-Ecore.jpg)
+![Ecore metamodel for OCCI]({{ BASE_PATH }}/assets/img/OCCI-Ecore.png)
 
 * [OCCI.ecore]({{ BASE_PATH }}/assets/EMF/OCCI.ecore)
 * [OCCI.ecorediag]({{ BASE_PATH }}/assets/EMF/OCCI.ecorediag)
