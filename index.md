@@ -5,7 +5,8 @@ tagline: Towards a formal model-driven approach for managing Everything as a Ser
 ---
 {% include JB/setup %}
 
-OCCIware aims at building a formal model-driven approach for managing Everything as a Service.
+OCCIware proposes a formal model-driven approach for managing Everything as a Service.
+This approach is based on [OCCI](http://occi-wg.org/) and is illustrated in the next figure.
 
 ![OCCIware: a formal model-driven approach for managing Everything as a Service]({{ site.url }}/assets/img/OCCIware-big-picture.jpg)
 
@@ -20,4 +21,4 @@ OCCIware is built on 3 pillars:
 * a [deployment framework]({{ BASE_PATH }}/implementation.html) based on
   [erocci](http://jeanparpaillon.github.com/erocci).
 
-Some OCCI models are also [presented here]({{ BASE_PATH }}/models.html).
+Some OCCI extensions are also [presented here]({{ BASE_PATH }}/models.html).
