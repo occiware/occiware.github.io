@@ -41,3 +41,24 @@ Following figure shows an OCCI Infrastructure instance with 2 computes, 1 networ
 
 ![An OCCI Infrastructure instance]({{ BASE_PATH }}/assets/img/OCCI-Infrastructure-Instance.png)
 
+# A formal specification of the OCCI Platform Extension with Alloy
+
+A formal specification of the OCCI Platform Extension with [Alloy](http://alloy.mit.edu/alloy/) is available [here]({{ BASE_PATH }}/assets/Alloy/occi_platform.als).
+
+A specific Alloy theme is provided [here]({{ BASE_PATH }}/assets/Alloy/occi_platform-category.thm) to visualize OCCI Platform categories.
+
+Following figure shows the OCCI Type System including the OCCI Platform Extension categories.
+
+![The OCCI Type System including the OCCI Platform Extension]({{ BASE_PATH }}/assets/img/OCCI-Platform-Type-System.png)
+
+# A formal specification of the OCCI Application Extension with Alloy
+
+A formal specification of the OCCI Application Extension with [Alloy](http://alloy.mit.edu/alloy/) is available [here]({{ BASE_PATH }}/assets/Alloy/occi_application.als).
+
+A specific Alloy theme is provided [here]({{ BASE_PATH }}/assets/Alloy/occi_application-category.thm) to visualize OCCI Application categories.
+
+Following figure shows the OCCI Type System including the OCCI Application Extension categories.
+
+![The OCCI Type System including the OCCI Application Extension]({{ BASE_PATH }}/assets/img/OCCI-Application-Type-System.png)
+
+
