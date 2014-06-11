@@ -7,6 +7,7 @@ sig Network extends Resource {
   occi_network_label: lone String,
   occi_network_state: one String
 } {
+  hasKind[network]
 } 
 
 one sig network extends Kind {} {
@@ -64,6 +65,7 @@ sig Compute extends Resource {
   occi_compute_memory: lone String,
   occi_compute_state: one String
 } {
+  hasKind[compute]
 } 
 
 one sig compute extends Kind {} {
@@ -177,6 +179,7 @@ sig Storage extends Resource {
   occi_storage_size: one String,
   occi_storage_state: one String
 } {
+  hasKind[storage]
 } 
 
 one sig storage extends Kind {} {
@@ -251,6 +254,7 @@ sig StorageLink extends Link {
 } {
   source in Compute
   target in Storage
+  hasKind[storagelink]
 }
 
 one sig storagelink extends Kind {} {
@@ -294,6 +298,7 @@ sig NetworkInterface extends Link {
 } {
   source in Compute
   target in Network
+  hasKind[networkinterface]
 }
 
 one sig networkinterface extends Kind {} {
@@ -442,3 +447,14 @@ run an_OCCI_Infrastructure_instance {
     }
   }
 } for 0 but exactly 2 Compute, exactly 1 Network, exactly 1 Storage, exactly 2 NetworkInterface, exactly 2 StorageLink
+
+check AllEntitiesHaveTheCorrectKind {
+  compute.isKindOf[Compute]
+  network.isKindOf[Network]
+  storage.isKindOf[Storage]
+  networkinterface.isKindOf[NetworkInterface]
+  storagelink.isKindOf[StorageLink]
+  resource.isKindOf[Resource - Compute - Network - Storage]
+  link.isKindOf[Link - NetworkInterface - StorageLink]
+  no entity.entities
+} for 10 but exactly 8 Kind
