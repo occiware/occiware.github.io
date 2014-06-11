@@ -60,6 +60,12 @@ abstract sig Entity {
   mixins: set Mixin,
 } {
   no disj m1, m2 : mixins | m1.identity = m2.identity
+  hasKind[entity]
+}
+
+pred Entity.hasKind[k : Kind]
+{
+  k in this.kind.*parent
 }
 
 one sig entity extends Kind {} {
@@ -69,7 +75,6 @@ one sig entity extends Kind {} {
   attributes = occi_core_title
   no actions
   no parent
-  no entities
 }
 one sig occi_core_title extends Attribute {} {
   name = "occi.core.title"
@@ -84,6 +89,7 @@ sig Resource extends Entity {
   links: set Link,
 } {
   no disj l1, l2 : links | l1.@id = l2.@id
+  hasKind[resource]
 } 
 
 one sig resource extends Kind {} {
@@ -109,6 +115,7 @@ sig Link extends Entity {
   target: one Resource
 } {
   source = ~links[this]
+  hasKind[link]
 }
 
 one sig link extends Kind {} {
@@ -132,11 +139,17 @@ run an_OCCI_Core_instance {
     l1.source = r1 and l1.target = r2
     l2.source = r2 and l2.target = r3
   }
-} for 3 but 3 Resource, 2 Link
+} for 0 but exactly 3 Resource, exactly 2 Link
+
+
+pred isKindOf[aKind : Kind, setEntities : set Entity]
+{
+  all e : setEntities | e.kind = aKind
+  aKind.entities = setEntities
+}
 
 check AllEntitiesHaveTheCorrectKind {
-  all r : Resource | r.kind = resource
-  resource.entities = Resource
-  all l : Link | l.kind = link
-  link.entities = Link
+  resource.isKindOf[Resource]
+  link.isKindOf[Link]
+  no entity.entities
 } for 10 but exactly 3 Kind
