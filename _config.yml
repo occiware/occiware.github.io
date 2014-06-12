@@ -11,9 +11,9 @@ pygments: true
 title : OCCIware
 tagline: A model-driven approach for manging everything-as-a-service
 author :
-  name : Jean Parpaillon
+  name : Parpaillon J., Merle P., Barais O. and Tata S.
   email : jean.parpaillon@free.fr
-  github : http://jeanparpaillon.github.com
+  github : http://github.com/occiware
 #  twitter : 
 #  feedburner : feedname
 
