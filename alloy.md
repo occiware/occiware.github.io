@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "A formal framework for OCCI"
+group: top
 description: "A formal framework for OCCI"
 ---
 {% include JB/setup %}

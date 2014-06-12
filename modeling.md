@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "Modeling"
+group: top
 description: "A modeling environment for OCCI"
 ---
 {% include JB/setup %}
