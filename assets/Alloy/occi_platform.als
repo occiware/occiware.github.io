@@ -159,7 +159,7 @@ one sig occi_database_restart extends Action {} {
   no attributes
 }
 one sig occi_database_backup extends Action {} {
-  term="restart"
+  term="backup"
   scheme="http://schemas.ogf.org/occi/platform/database/action#"
   title = "backup the instance"
   no attributes
