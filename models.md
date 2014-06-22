@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "Models"
+group: top
 description: "OCCI Extensions"
 ---
 {% include JB/setup %}

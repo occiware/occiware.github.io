@@ -8,74 +8,157 @@
 <defaultedge/>
 
 <node>
-   <type name="Category"/>
-   <type name="entity"/>
-   <type name="false"/>
-   <type name="Link"/>
-   <type name="link"/>
-   <type name="occi_core_summary"/>
-   <type name="occi_core_title"/>
-   <type name="Resource"/>
-   <type name="resource"/>
-   <type name="true"/>
+   <type name="Univ"/>
    <type name="univ"/>
-   <type name="ordering/Ord"/>
+   <type name="occi_application/Application"/>
+   <type name="occi_application/application"/>
+   <type name="occi_application/Deployable"/>
+   <type name="occi_application/deployable"/>
+   <type name="occi_application/Environment"/>
+   <type name="occi_application/environment"/>
+   <type name="occi_application/EnvironmentLink"/>
+   <type name="occi_application/environmentlink"/>
+   <type name="occi_application/occi_application_description"/>
+   <type name="occi_application/occi_application_instances"/>
+   <type name="occi_application/occi_application_name"/>
+   <type name="occi_application/occi_application_restart"/>
+   <type name="occi_application/occi_application_start"/>
+   <type name="occi_application/occi_application_state"/>
+   <type name="occi_application/occi_application_stop"/>
+   <type name="occi_application/occi_application_update"/>
+   <type name="occi_application/occi_application_update_context"/>
+   <type name="occi_application/occi_application_url"/>
+   <type name="occi_application/occi_deployable_contenttype"/>
+   <type name="occi_application/occi_deployable_description"/>
+   <type name="occi_application/occi_deployable_location"/>
+   <type name="occi_application/occi_deployable_name"/>
+   <type name="occi_application/occi_deployable_state"/>
+   <type name="occi_application/occi_deployable_update"/>
+   <type name="occi_application/occi_deployable_update_deployable"/>
+   <type name="occi_application/occi_environment_description"/>
+   <type name="occi_application/occi_environment_memory"/>
+   <type name="occi_application/occi_environment_name"/>
+   <type name="occi_application/occi_environment_state"/>
+   <type name="occi_application/occi_environment_update"/>
+   <type name="occi_application/occi_environment_update_context"/>
+   <type name="occi_application/occi_environment_variables"/>
+   <type name="occi_application/occi_environmentlink_state"/>
+   <type name="occi_core/Action"/>
+   <type name="occi_core/Attribute"/>
+   <type name="occi_core/Boolean"/>
+   <type name="occi_core/Category"/>
+   <type name="occi_core/Entity"/>
+   <type name="occi_core/entity"/>
+   <type name="occi_core/false"/>
+   <type name="occi_core/Kind"/>
+   <type name="occi_core/Link"/>
+   <type name="occi_core/link"/>
+   <type name="occi_core/Mixin"/>
+   <type name="occi_core/occi_core_summary"/>
+   <type name="occi_core/occi_core_title"/>
+   <type name="occi_core/Resource"/>
+   <type name="occi_core/resource"/>
+   <type name="occi_core/true"/>
+   <type name="occi_infrastructure/Compute"/>
+   <type name="occi_infrastructure/compute"/>
+   <type name="occi_infrastructure/ipnetwork"/>
+   <type name="occi_infrastructure/Network"/>
+   <type name="occi_infrastructure/network"/>
+   <type name="occi_infrastructure/NetworkInterface"/>
+   <type name="occi_infrastructure/networkinterface"/>
+   <type name="occi_infrastructure/occi_compute_architecture"/>
+   <type name="occi_infrastructure/occi_compute_cores"/>
+   <type name="occi_infrastructure/occi_compute_hostname"/>
+   <type name="occi_infrastructure/occi_compute_memory"/>
+   <type name="occi_infrastructure/occi_compute_restart"/>
+   <type name="occi_infrastructure/occi_compute_restart_method"/>
+   <type name="occi_infrastructure/occi_compute_speed"/>
+   <type name="occi_infrastructure/occi_compute_start"/>
+   <type name="occi_infrastructure/occi_compute_state"/>
+   <type name="occi_infrastructure/occi_compute_stop"/>
+   <type name="occi_infrastructure/occi_compute_stop_method"/>
+   <type name="occi_infrastructure/occi_compute_suspend"/>
+   <type name="occi_infrastructure/occi_compute_suspend_method"/>
+   <type name="occi_infrastructure/occi_network_address"/>
+   <type name="occi_infrastructure/occi_network_allocation"/>
+   <type name="occi_infrastructure/occi_network_down"/>
+   <type name="occi_infrastructure/occi_network_gateway"/>
+   <type name="occi_infrastructure/occi_network_label"/>
+   <type name="occi_infrastructure/occi_network_state"/>
+   <type name="occi_infrastructure/occi_network_up"/>
+   <type name="occi_infrastructure/occi_network_vlan"/>
+   <type name="occi_infrastructure/occi_networkinterface_interface"/>
+   <type name="occi_infrastructure/occi_networkinterface_mac"/>
+   <type name="occi_infrastructure/occi_networkinterface_state"/>
+   <type name="occi_infrastructure/occi_storage_backup"/>
+   <type name="occi_infrastructure/occi_storage_offline"/>
+   <type name="occi_infrastructure/occi_storage_online"/>
+   <type name="occi_infrastructure/occi_storage_resize"/>
+   <type name="occi_infrastructure/occi_storage_resize_size"/>
+   <type name="occi_infrastructure/occi_storage_size"/>
+   <type name="occi_infrastructure/occi_storage_snapshot"/>
+   <type name="occi_infrastructure/occi_storage_state"/>
+   <type name="occi_infrastructure/occi_storagelink_deviceid"/>
+   <type name="occi_infrastructure/occi_storagelink_mountpoint"/>
+   <type name="occi_infrastructure/occi_storagelink_state"/>
+   <type name="occi_infrastructure/os_tpl"/>
+   <type name="occi_infrastructure/resource_tpl"/>
+   <type name="occi_infrastructure/Storage"/>
+   <type name="occi_infrastructure/storage"/>
+   <type name="occi_infrastructure/StorageLink"/>
+   <type name="occi_infrastructure/storagelink"/>
+   <type name="occi_platform/Container"/>
+   <type name="occi_platform/container"/>
+   <type name="occi_platform/ContainerLink"/>
+   <type name="occi_platform/containerlink"/>
+   <type name="occi_platform/Database"/>
+   <type name="occi_platform/database"/>
+   <type name="occi_platform/DatabaseLink"/>
+   <type name="occi_platform/databaselink"/>
+   <type name="occi_platform/occi_container_architecture"/>
+   <type name="occi_platform/occi_container_name"/>
+   <type name="occi_platform/occi_container_restart"/>
+   <type name="occi_platform/occi_container_start"/>
+   <type name="occi_platform/occi_container_state"/>
+   <type name="occi_platform/occi_container_stop"/>
+   <type name="occi_platform/occi_container_suspend"/>
+   <type name="occi_platform/occi_container_version"/>
+   <type name="occi_platform/occi_containerlink_state"/>
+   <type name="occi_platform/occi_database_architecture"/>
+   <type name="occi_platform/occi_database_backup"/>
+   <type name="occi_platform/occi_database_name"/>
+   <type name="occi_platform/occi_database_restart"/>
+   <type name="occi_platform/occi_database_snapshot"/>
+   <type name="occi_platform/occi_database_start"/>
+   <type name="occi_platform/occi_database_state"/>
+   <type name="occi_platform/occi_database_stop"/>
+   <type name="occi_platform/occi_database_type"/>
+   <type name="occi_platform/occi_database_version"/>
+   <type name="occi_platform/occi_databaselink_state"/>
+   <type name="occi_platform/occi_router_architecture"/>
+   <type name="occi_platform/occi_router_configure"/>
+   <type name="occi_platform/occi_router_configure_config"/>
+   <type name="occi_platform/occi_router_disable"/>
+   <type name="occi_platform/occi_router_enable"/>
+   <type name="occi_platform/occi_router_name"/>
+   <type name="occi_platform/occi_router_state"/>
+   <type name="occi_platform/occi_router_version"/>
+   <type name="occi_platform/occi_routerlink_state"/>
+   <type name="occi_platform/Router"/>
+   <type name="occi_platform/router"/>
+   <type name="occi_platform/RouterLink"/>
+   <type name="occi_platform/routerlink"/>
    <type name="seq/Int"/>
-   <set name="this/URI" type="String"/>
-</node>
-
-<node color="Blue">
-   <type name="Kind"/>
-</node>
-
-<node color="Gray">
-   <type name="Entity"/>
-</node>
-
-<node color="Green">
-   <type name="Action"/>
-</node>
-
-<node color="Red">
-   <type name="Attribute"/>
-</node>
-
-<node color="Yellow">
-   <type name="Mixin"/>
+   <type name="occi_core/ordering/Ord"/>
+   <set name="occi_infrastructure/IpNetwork" type="occi_infrastructure/Network"/>
+   <set name="occi_infrastructure/OS_TPL" type="occi_infrastructure/Compute"/>
+   <set name="occi_infrastructure/Resource_TPL" type="occi_core/Resource"/>
 </node>
 
 <node visible="no">
-   <type name="Boolean"/>
    <type name="Int"/>
    <type name="String"/>
 </node>
-
-<edge constraint="no">
-   <relation name="entities"> <type name="Kind"/> <type name="Entity"/> </relation>
-</edge>
-
-<edge layout="yes">
-   <relation name="parent"> <type name="Kind"/> <type name="Kind"/> </relation>
-   <relation name="source"> <type name="Link"/> <type name="Resource"/> </relation>
-   <relation name="target"> <type name="Link"/> <type name="Resource"/> </relation>
-</edge>
-
-<edge layout="yes" constraint="no">
-   <relation name="kind"> <type name="Entity"/> <type name="Kind"/> </relation>
-</edge>
-
-<edge visible="no" attribute="yes">
-   <relation name="default"> <type name="Attribute"/> <type name="String"/> </relation>
-   <relation name="description"> <type name="Attribute"/> <type name="String"/> </relation>
-   <relation name="id"> <type name="Entity"/> <type name="String"/> </relation>
-   <relation name="mutable"> <type name="Attribute"/> <type name="Boolean"/> </relation>
-   <relation name="name"> <type name="Attribute"/> <type name="String"/> </relation>
-   <relation name="required"> <type name="Attribute"/> <type name="Boolean"/> </relation>
-   <relation name="scheme"> <type name="Category"/> <type name="String"/> </relation>
-   <relation name="term"> <type name="Category"/> <type name="String"/> </relation>
-   <relation name="title"> <type name="Category"/> <type name="String"/> </relation>
-   <relation name="type"> <type name="Attribute"/> <type name="String"/> </relation>
-</edge>
 
 </view>
 
