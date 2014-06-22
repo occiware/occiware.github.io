@@ -10,7 +10,7 @@ description: "A formal framework for OCCI"
 
 Following figure gives an informal overview of the OCCI Core Model.
 
-![Informal OCCI Core Model]({{ BASE_PATH }}/assets/img/occi-core-model-12.jpg)
+<img alt="Informal OCCI Core Model" src="{{ BASE_PATH }}/assets/img/occi-core-model-12.jpg" style="width: 100%" />
 
 # A formal specification of OCCI Core with Alloy
 
@@ -20,11 +20,11 @@ A specific Alloy theme is provided [here]({{ BASE_PATH }}/assets/Alloy/occi_core
 
 Following figure shows the OCCI Core Type System.
 
-![The OCCI Core Type System]({{ BASE_PATH }}/assets/img/OCCI-Core-Type-System.png)
+<img alt="The OCCI Core Type System" src="{{ BASE_PATH }}/assets/img/OCCI-Core-Type-System.png" style="width: 100%" />
 
 Following figure shows an OCCI Core instance with 3 resources and 2 links.
 
-![An OCCI Core instance]({{ BASE_PATH }}/assets/img/alloy-visualizer-example.jpg)
+<img alt="An OCCI Core instance" src="{{ BASE_PATH }}/assets/img/alloy-visualizer-example.jpg" style="width: 100%" />
 
 # A formal specification of the OCCI Infrastructure Extension with Alloy
 
@@ -34,13 +34,13 @@ A specific Alloy theme is provided [here]({{ BASE_PATH }}/assets/Alloy/occi_infr
 
 Following figure shows the OCCI Type System including the OCCI Infrastructure Extension categories.
 
-![The OCCI Type System including the OCCI Infrastructure Extension]({{ BASE_PATH }}/assets/img/OCCI-Infrastructure-Type-System.png)
+<img alt="The OCCI Type System including the OCCI Infrastructure Extension" src="{{ BASE_PATH }}/assets/img/OCCI-Infrastructure-Type-System.png" style="width: 100%" />
 
 A specific Alloy theme is provided [here]({{ BASE_PATH }}/assets/Alloy/occi_infrastructure-instance.thm) to visualize OCCI Infrastructure instances.
 
 Following figure shows an OCCI Infrastructure instance with 2 computes, 1 network, 1 storage, 2 network interfaces, and 2 storage links.
 
-![An OCCI Infrastructure instance]({{ BASE_PATH }}/assets/img/OCCI-Infrastructure-Instance.png)
+<img alt="An OCCI Infrastructure instance" src="{{ BASE_PATH }}/assets/img/OCCI-Infrastructure-Instance.png" style="width: 100%" />
 
 # A formal specification of the OCCI Platform Extension with Alloy
 
@@ -50,7 +50,7 @@ A specific Alloy theme is provided [here]({{ BASE_PATH }}/assets/Alloy/occi_plat
 
 Following figure shows the OCCI Type System including the OCCI Platform Extension categories.
 
-![The OCCI Type System including the OCCI Platform Extension]({{ BASE_PATH }}/assets/img/OCCI-Platform-Type-System.png)
+<img alt="The OCCI Type System including the OCCI Platform Extension" src="{{ BASE_PATH }}/assets/img/OCCI-Platform-Type-System.png" style="width: 100%" />
 
 # A formal specification of the OCCI Application Extension with Alloy
 
@@ -60,6 +60,4 @@ A specific Alloy theme is provided [here]({{ BASE_PATH }}/assets/Alloy/occi_appl
 
 Following figure shows the OCCI Type System including the OCCI Application Extension categories.
 
-![The OCCI Type System including the OCCI Application Extension]({{ BASE_PATH }}/assets/img/OCCI-Application-Type-System.png)
-
-
+<img alt="The OCCI Type System including the OCCI Application Extension" src="{{ BASE_PATH }}/assets/img/OCCI-Application-Type-System.png" style="width: 100%" />
