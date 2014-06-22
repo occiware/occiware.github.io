@@ -61,4 +61,13 @@ Following figure shows the OCCI Type System including the OCCI Application Exten
 
 ![The OCCI Type System including the OCCI Application Extension]({{ BASE_PATH }}/assets/img/OCCI-Application-Type-System.png)
 
+# A multi-layer cloud system
+
+Following figure shows a multi-layer cloud system, i.e., including IaaS, PaaS and SaaS resources.
+
+![A multi-layer cloud system]({{ BASE_PATH }}/assets/img/Multi-Layer-Cloud-System.png)
+
+The [Alloy](http://alloy.mit.edu/alloy/) specification of this example is available [here]({{ BASE_PATH }}/assets/Alloy/multi-layer-cloud-system.als).
+
+A specific Alloy theme is provided [here]({{ BASE_PATH }}/assets/Alloy/multi-layer-cloud-system.thm) to visualize this multi-layer cloud system.
 
