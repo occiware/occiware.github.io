@@ -1,16 +1,26 @@
 module occi_core
 
 enum Boolean {false, true}
-sig URI  in String {}
+// Don't uncomment
+// sig URI  in String {}
+let URI=String 
 
 abstract sig Category {
   term: one String,
   scheme: one URI,
   title: lone String,
   attributes: set Attribute,
-  identity : term -> scheme
 } {
+// Following constraint has a strong impact on analysis execution time.
   no disj a1, a2 : attributes | a1.name = a2.name
+}
+
+pred sameIdentity[c1: Category, c2 : Category] {
+  c1.term = c2.term and c1.scheme = c2.scheme
+}
+
+pred sameCategories[categories : set Category] {
+  one categories.scheme and one categories.term
 }
 
 sig Attribute {
@@ -21,7 +31,7 @@ sig Attribute {
   default: lone String,
   description: lone String
 } {
-  one ~attributes[this].identity
+  sameCategories[~attributes[this]]
 }
 
 sig Kind extends Category {
@@ -32,7 +42,7 @@ sig Kind extends Category {
   entities = ~kind[this]
   entity in this.*@parent
   no attributes.name & this.^@parent.@attributes.name
-  no p : this.^@parent | identity = p.@identity
+  no p : this.^@parent | p.sameIdentity[this]
   no disj e1, e2 : entities | e1.id = e2.id
 }
 
@@ -44,14 +54,14 @@ sig Mixin extends Category {
 } {
   entities = ~mixins[this]
   all e : entities | (applies + entity) in e.kind.*parent
-  no d : this.^@depends | identity = d.@identity
-  no disj k1, k2 : applies | k1.@identity = k2.@identity
+  no d : this.^@depends | d.sameIdentity[this]
+  no disj k1, k2 : applies | k1.sameIdentity[k2]
   no disj e1, e2 : entities | e1.id = e2.id
 }
 
 sig Action extends Category {} {
   one ~(Kind<:actions + Mixin<:actions)[this]
-  no a : Action - this | a.@identity = identity 
+  no a : Action - this | a.sameIdentity[this]
 }
 
 abstract sig Entity {
@@ -59,7 +69,7 @@ abstract sig Entity {
   kind: one Kind,
   mixins: set Mixin,
 } {
-  no disj m1, m2 : mixins | m1.identity = m2.identity
+  no disj m1, m2 : mixins | m1.sameIdentity[m2]
   hasKind[entity]
 }
 
