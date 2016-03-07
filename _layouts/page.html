@@ -1,5 +1,63 @@
----
-layout: default
----
-{% include JB/setup %}
-{% include themes/bootstrap-3/page.html %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>{{ page.title }}</title>
+  
+	<link type="text/css" rel="stylesheet" media="all" href="/resources/css/style.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous" />
+	<link rel="shortcut icon" href="/favicon.ico" />
+
+	<script src="http://code.jquery.com/jquery.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script src="/resources/js/helpers.js"></script>
+</head>
+
+<body>
+	<div id="menu">
+		<p id="logo">
+			<a href="/"><img src="/resources/images/logo.png" alt="OCCIWare's logo" /></a>
+		</p>
+		<ul>
+			<li {% if page.menu == "home" %} class="active"{% endif %}><a href="/">Home</a></li>
+			<li {% if page.menu == "user-guides" %} class="active"{% endif %}><a href="/content/user-guides/snapshot/index.html">User Guide</a></li>
+			<li {% if page.menu == "dev-guides" %} class="active"{% endif %}><a href="/content/developer-guides/snapshot/index.html">Developer Guide</a></li>
+			<li {% if page.menu == "links" %} class="active"{% endif %}><a href="/content/links.html">Links</a></li>
+		</ul>
+	</div>
+
+	<div id="content">
+		<h1 id="page-title">{{ page.title }}</h1>
+		
+		{% if page.menu == "user-guides" or page.menu == "user-guides" %}
+			{% if page.released == "true" %}
+			<p>
+				<span class="glyphicon glyphicon-flag"></span>
+				This is the 
+				{% if page.menu == "user-guides" %}user guide{% endif %}
+				{% if page.menu == "dev-guides" %}developer guide{% endif %}
+				for OCCIware
+				{{ page.version }}.
+			</p>
+			{% else %}
+			<p>
+				<span class="glyphicon glyphicon-flag"></span>
+				This is the
+				{% if page.menu == "user-guides" %}user guide{% endif %}
+				{% if page.menu == "dev-guides" %}developer guide{% endif %}
+				for the snapshot version of OCCIware.
+			</p>
+			{% endif %}
+		{% endif %}
+
+		{{content}}
+	</div>
+	<div class="clear"></div>
+
+	<div id="footer">
+		Copyright &copy; 2015-{{ site.time | date: '%Y' }}, OCCIware Partners
+	</div>
+
+</body>
+</html>
