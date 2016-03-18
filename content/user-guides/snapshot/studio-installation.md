@@ -7,7 +7,7 @@ version: 1.0
 released: false
 ---
 
-Download the Cloud Designer here: [http://www.obeo.fr/download/occiware/]("http://www.obeo.fr/download/occiware/").  
+Download the Cloud Designer here: [http://www.obeo.fr/download/occiware/](http://www.obeo.fr/download/occiware/).  
 If you installed a previous version, you can update it using the update site.
 
 Unzip the bundle, then launch the eclipse application.
