@@ -57,7 +57,14 @@
 			</p>
 			{% endif %}
 		{% endif %}
-
+		
+		{% if page.cat != blank %}
+			<p>
+				<a href="index.html">{{ page.cat }}</a> &raquo; <a href="#">{{ page.title }}</a>
+			</p>
+			<br />
+		{% endif %}
+	
 		{{content}}
 	</div>
 	<div class="clear"></div>

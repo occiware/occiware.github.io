@@ -10,6 +10,18 @@ released: false
 
 The studio is based on Eclipse.
 
+* [Installing OCCIware's studio](studio-installation.html)
+* [Designing a new OCCI extension](studio-new-occi-extension.html)
+* [Using the OCCI extension designer](studio-extension-designer.html)
+* [Using the OCCI configuration designer](studio-configuration-designer.html)
+* [Using OCCIware's generators](studio-generators.html)
+* [Advanced usage](studio-advanced-usage.html)
+
+## Connectors
+
+* [Docker](connector-docker.html)
+* [jOCCI](connector-jocci.html)
+
 ## Erocci
 
 The default runtime platform for OCCIware.

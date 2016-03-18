@@ -17,6 +17,11 @@ menu: links
 * [Official web site](http://www.occiware.org) hosted by OW2
 * [Erocci](http://erocci.ow2.org) at OW2
 
+## OCCI
+
+* OCCI's [stable specifications](http://occi-wg.org/about/specification/)
+* OCCI's [current specifications](https://redmine.ogf.org/projects/occi-wg/)
+
 ## Social
 
 * [Twitter](https://twitter.com/occiware) account
