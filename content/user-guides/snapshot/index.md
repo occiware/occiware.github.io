@@ -16,12 +16,15 @@ The studio is based on Eclipse.
 * [Using the OCCI configuration designer](studio-configuration-designer.html)
 * [Using OCCIware's generators](studio-generators.html)
 * [Advanced usage](studio-advanced-usage.html)
+* [Howtos / best practices](howtos.html)
 
 ## Connectors
 
 * [Docker](connector-docker.html)
 * [jOCCI](connector-jocci.html)
 
-## Erocci
+## Runtime 
 
-The default runtime platform for OCCIware.
+* [Erocci](http://erocci.ow2.org) : scalable, multi protocol, multi backend OCCI runtime platform
+* [erocci-dbus-java](http://github.com/occiware/erocci-dbus-java) : runtime server for Studio connectors, allowing to expose them as OCCI through erocci (being an erocci java backend)
+* OCCInterface (OCCI playground) : [sources](https://github.com/occiware/OCCInterface) and [online test deployment](http://occinterface.herokuapp.com/)
