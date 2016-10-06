@@ -47,3 +47,11 @@ Otherwise this will lead to memory issues.
 2. In Eclipse, import the all the projects from the cloned Git (**File » Import » Existing Project into Workspace**).  
 3. Verify that there are no error on compiled projects. If errors are marked and the projects cannot compile, check the Java (JRE) version
 (right-click on **Project » Properties**).
+
+## Build your own Cloud Designer from sources
+1. Clone the sources from the project ecore (https://github.com/occiware/ecore) in your local directory
+2. cd ecore/clouddesigner/org.occiware.clouddesigner.parent
+3. mvn clean verify
+
+**Warning**
+It takes half an hour to build
