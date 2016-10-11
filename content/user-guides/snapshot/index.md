@@ -23,7 +23,11 @@ The studio is based on Eclipse.
 * [Docker](connector-docker.html)
 * [jOCCI](connector-jocci.html)
 
-## Runtime 
+## Runtime
+
+* [Exposing a connector as an OCCI HTTP API](runtime-expose-a-connector-as-OCCI-HTTP.html)
+
+Runtime links :
 
 * [Erocci](http://erocci.ow2.org) : scalable, multi protocol, multi backend OCCI runtime platform
 * [erocci-dbus-java](http://github.com/occiware/erocci-dbus-java) : runtime server for Studio connectors, allowing to expose them as OCCI through erocci (being an erocci java backend)
