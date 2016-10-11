@@ -20,16 +20,16 @@ This Eclipse distribution contains all the required dependencies.
 
 It is also possible to configure a standard Eclipse distribution to run the OCCIware project.
 
-1. Download [Eclipse Mars](http://www.eclipse.org/downloads/packages/eclipse-ide-java-developers/mars).   
+1. Download [Eclipse Neon](http://www.eclipse.org/downloads/packages/eclipse-ide-java-developers/neon1).   
 2. Launch Eclipse.  
-3. In Eclipse, install the following tools from http://download.eclipse.org/releases/mars.
+3. In Eclipse, install the following tools from http://download.eclipse.org/releases/neon.
 
-   * Mylyn WikiText (for Wiki syntax support, normally pre-installed/in-built with Eclipse Mars).
    * Eclipse Modeling Framework (EMF SDK & EMF Compare).
    * Acceleo Core SDK.
    * Xtext Complete SDK.
-   * Sirius Specification Environment (check that Sirius Runtime is included).
    * OCL Examples and Editors SDK.
+   * Sirius Specificier Environment (normally Sirius Runtime is included).
+   * (Mylyn WikiText - for Wiki syntax support - is pre-installed/in-built since Eclipse Mars)
 
 
 ## Notes
