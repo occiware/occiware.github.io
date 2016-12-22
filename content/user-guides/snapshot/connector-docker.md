@@ -11,15 +11,13 @@ This sub project aims at providing the required tools to execute the OCCIWARE mo
 
 ## Prerequisites
 
-Supports Docker client version: 1.8.3.  
+Supports Docker client version: 1.11.x.  
+docker-machine version: 0.82.
 Be sure the Docker daemon is running.
 You should have an account or register yourself on: https://hub.docker.com/account/signup/.
 To use the **vmwarevsphere** driver, you should install `govc` CLI as described [here](https://github.com/vmware/govmomi/tree/master/govc).
 
 ```bash
-# Setting the docker-machine command (you should download docker-machine).
-ln -s /path/to-file/docker-machine /usr/bin/docker-machine
-
 # Setting the govc command.
 ln -s /path/to-file/govc /usr/bin/govc
 ```
