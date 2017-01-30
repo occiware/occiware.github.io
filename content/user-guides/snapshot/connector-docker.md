@@ -73,3 +73,8 @@ You can also import all the machines deployed in the execution environment.
 This video shows how to launch the modeler and its different features.
   
 <iframe width="420" height="315" src="https://www.youtube.com/embed/2SZXi71L0qQ" frameborder="0" allowfullscreen></iframe>
+
+## The new Docker Studio GUI
+The new Docker studio supports the multi-host network, swarm, volume management.
+
+![Viewpoint Selections](/resources/images/docker/Docker-Studio.png "Overview")
