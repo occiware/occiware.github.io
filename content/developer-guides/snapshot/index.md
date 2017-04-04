@@ -13,7 +13,7 @@ The studio is based on Eclipse.
 * [Setting up the environment](studio-setting-up-the-environment.html)
 * [Creating a Code Generator](studio-creating-a-code-generator.html)
 * [Creating a Java Connector](studio-creating-a-java-connector.html)
-* [Creating a Sirius Example](studio-creating-a-sirius-example.hmtl)
+* [Creating a Sirius Example](studio-creating-a-sirius-example.html)
 
 ## Runtime 
 Runtime links :
