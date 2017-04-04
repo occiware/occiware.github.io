@@ -11,6 +11,7 @@ released: false
 The studio is based on Eclipse.
 
 * [Installing OCCIware's studio](studio-installation.html)
+* [Browsing and Installing OCCIware's studio example projects](studio-examples.html)
 * [Designing a new OCCI extension](studio-new-occi-extension.html)
 * [Using the OCCI extension designer](studio-extension-designer.html)
 * [Using the OCCI configuration designer](studio-configuration-designer.html)
