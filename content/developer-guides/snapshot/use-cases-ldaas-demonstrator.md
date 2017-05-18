@@ -45,7 +45,7 @@ You will need to contact the app maintainer, Marc Dutoo (mdutoo on Github), to g
 
 For starters, let's get our dev environment set up and ready to go. If you haven't already done that, go to [the setup page](http://occiware.github.io/content/developer-guides/snapshot/studio-setting-up-the-environment.html).
 
-Make sure you have both installed a "Host Eclipse" and that you have a "Guest Eclipse" opened in it. For easier use, we recommend you use
+Make sure you have both installed a "Host Eclipse" and that you have a "Guest Eclipse" opened in it. For easier use, we recommend you use the Java Perspective in the "Host Eclipse", so that you can click on the debug button when launching, and then get the Debug Perspective. To do so go to the top menu > Window > Perspective > Open Perspective > Java.
 
 First off, clone the demo repository : [https://github.com/occiware/occiware-ozwillo.git](https://github.com/occiware/occiware-ozwillo.git).
 
