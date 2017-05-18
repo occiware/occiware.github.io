@@ -28,7 +28,7 @@ This is the community website for OCCIware : it contains documentation for both 
 
 ## What are the Occiware framework components ?
 
-You will find the many components of the project in the https://github.com/occiware Github Organization. Below you will find a quick description for the core projects.
+You will find the many components of the project in the [Github Organization](https://github.com/occiware). Below you will find a quick description for the core projects.
 
 ### [OCCI-Studio](https://github.com/occiware/OCCI-Studio)
 

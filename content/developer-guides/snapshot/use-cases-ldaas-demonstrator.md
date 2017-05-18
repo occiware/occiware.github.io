@@ -7,16 +7,13 @@ cat: Use Cases
 released: false
 ---
 
+# Demonstrations
 
-### Other projects
+## [Connector Analytics - Linked Data server on Docker optimized for analytics](https://github.com/occiware/occiware-ozwillo/blob/master/connector-analytics/)
 
-#### [Ozwillo Datacore](https://github.com/ozwillo/ozwillo-datacore)
+For starters, let's get our dev environment set up and ready to go. If you haven't already done that, go to [the setup page](http://occiware.github.io/content/developer-guides/snapshot/studio-setting-up-the-environment.html).
 
-The Datacore is a project that isn't directly linked to Occiware, though it brings powerful concepts and ideas that nourish the demos.
-
-### Demonstrations
-
-#### [Connector Analytics - Linked Data server on Docker optimized for analytics](https://github.com/occiware/occiware-ozwillo/blob/master/connector-analytics/)
+You can either choose to install the project's Eclipse distribution, CloudDesigner (Cf. the page's first section), or if you already have a preinstalled version of Eclipse you might prefer to set it up by hand (Cf. sections 2 to 4).
 
 _Presentation Excerpt_ :
 
@@ -24,7 +21,7 @@ _Presentation Excerpt_ :
 
 "This demo showcases OCCIware Studio deploying a complete, working Ozwillo Datacore cluster (one Java and 3 mongo replica nodes) on Docker both locally and on a remote Open Stack VM, and developing a custom OCCI extension (including designer and connector) for Linked Data that allows to publish data projects and let them use a specific mongo secondary rather than the whole cluster (typically for read-heavy queries such as for analytics). This last point is achieved by visually linking OCCI Resources across Cloud layers : from Linked Data as a Service (LDaaS) to Infrastructure as a Service (IaaS)."
 
-##### Executing the Linked Data Demo
+### Executing the Linked Data Demo
 
 Once you have CloudDesigner up and running, be it as a standalone application or within another Eclipse instance, let's test it with a demo.
 
@@ -38,7 +35,7 @@ Then, follow the instructions written in the [README.md file](https://github.com
 
 > NDLR : As for Docker the Docker install, the instructions are outdated because the versioning and installation process have completely changed since march 2017 ! It is better to follow the recommended steps in the [Docker Documentation - Installation for Ubuntu](https://docs.docker.com/engine/installation/linux/ubuntu/).
 
-##### Questions about the demo :
+### Questions about the demo :
 
 [Marc Dutoo's presentation on Youtube - Demonstration](https://youtu.be/HuDEbpC0eSw?t=713).
 
@@ -48,11 +45,15 @@ Then, follow the instructions written in the [README.md file](https://github.com
 
 + Do you know of [Rancher](http://rancher.com/rancher/) ?
 
-#### [Ozwillo Ozenergy](https://github.com/ozwillo/ozwillo-ozenergy)
+### Other projects
+
+The [Ozwillo Datacore](https://github.com/ozwillo/ozwillo-datacore) Datacore is a project that isn't directly linked to Occiware, but this demo relies on it.
+
+## [Ozwillo Ozenergy](https://github.com/ozwillo/ozwillo-ozenergy)
 
 OzEnergy is an energy consumption monitoring application meant to use the capabilities provided by OCCI to scale way up and offer data monitoring capabilities ranging from the very consumers, to providers and territories alike.
 
-##### Executing the Ozenergy Demo
+### Executing the Ozenergy Demo
 
 Simply follow the instructions available on the [Github repository](https://github.com/ozwillo/ozwillo-ozenergy), keeping in mind the few following details that are not so clear :
 
@@ -74,42 +75,12 @@ Simply follow the instructions available on the [Github repository](https://gith
 
 > + And finally, even though "mvn clean package" fails, we are able to successully run "mvn spring-boot:run" and open the webapp in the browser, but no graph nor data is displayed, probably because of the previous command's failure.
 
-#### [OCCInterface](https://github.com/occiware/OCCInterface)
+## [OCCInterface](https://github.com/occiware/OCCInterface)
 
 OCCInterface is a generic application that lets you explore and modify the resources of an OCCI server, regardless of what OCCI information we are talking about.
 
 _[Demo en live sur Heroku](http://occinterface.herokuapp.com/)_
 
-##### Executing the Occinterface Demo
+### Executing the Occinterface Demo
 
 Simply follow the instructions available on the [Github repository](https://github.com/occiware/OCCInterface).
-
-## How to contribute ?
-
-### <a name="getting_started"></a>Getting started with the Occiware framework
-
-The reference documentation for Occiware is hosted separately from the main website, [on Github.io](http://occiware.github.io/).
-
-For starters, let's get our dev environment set up and ready to go. For that, go to [the setup page](http://occiware.github.io/content/developer-guides/snapshot/studio-setting-up-the-environment.html).
-
-You can either choose to install the project's Eclipse distribution, CloudDesigner (Cf. the page's first section), or if you already have a preinstalled version of Eclipse you might prefer to set it up by hand (Cf. sections 2 to 4).
-
-> NDLR : it would probably be more appropriate to reorganize these sections into subsections according to the description above.
-
-> NDLR : About package installation
-Go to Help > Install New packages
-Choose "http://download.eclipse.org/releases/neon" in the proposed list of package sources.
-To find the exact packages you need for Eclipse Neon, type in the search tab :
-
-> - EMF - Eclipse Modeling Framework SDK
-> - Model Comparison (EMF Compare)
-> - Acceleo
-> - Xtext Complete SDK
-> - OCL Examples and Editors SDK
-> - Sirius Specifier Environment
-
-> NDLR : Actually, importing the necessary stuff by hand in Eclipse takes loads of time because of the many errors. Even with the steps given, the project still gives off errors, however we are able to launch Eclipse from Eclipse.
-
-> NDLR : The documentation could use some extra screenshots : it would be really helpful for people that are not yet extra familiar with Eclipse. It would also help to remove a few ambiguities.
-
-> NDLR : This sentence : "in order to download all connector dependencies using Maven, either build it all (see below), or quicker : do mvn clean install in all the .connector.dependencies projects, then refresh them all (CTRL-A then F5). Their lib/ directories should now be filled with dependency jars." could be replaced by "select all the projects, right-click and click on Maven > Update Project".
