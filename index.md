@@ -36,7 +36,7 @@ Throughout the documentation, you will see references to either CloudDesigner, O
 
 Actually, the [OCCI-Studio repository](https://github.com/occiware/OCCI-Studio) is for a future version of the studio, but for now all the current code is currently being held in the [Ecore repository](https://github.com/occiware/ecore). The OCCI-Studio will actually be separated into several different projects, including itself and others like Docker-Studio to separate capabilities that are not directly related.
 
-See the ["Setting up the Environment"](studio-setting-up-the-environment.html)
+See the ["Setting up the Environment"](/content/developer-guides/snapshot/studio-setting-up-the-environment.html)
  page to install it.
 
 ### [MartServer](https://github.com/occiware/MartServer)

@@ -9,7 +9,7 @@ released: false
 
 ## If you just want to use the CloudDesigner / OCCI-Studio
 
-Simply install [OCCIware' Studio](/content/links.html).  
+Simply download [OCCI-Studio](http://www.obeo.fr/download/occiware/).  
 This Eclipse distribution contains all the required dependencies.
 
 1. Unzip the bundle, then launch the eclipse application (./eclipse).  

@@ -23,4 +23,4 @@ The Eclipse-based studio.
 
 ## Use cases
 
-### ["LinkedData as a Service" Demonstrator](use-cases-ldaas-demonstrator.html)
+* ["LinkedData as a Service" Demonstrator](use-cases-ldaas-demonstrator.html)
