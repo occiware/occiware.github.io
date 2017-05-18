@@ -9,7 +9,25 @@ released: false
 
 # Demonstrations
 
-## [Connector Analytics - Linked Data server on Docker optimized for analytics](https://github.com/occiware/occiware-ozwillo/blob/master/connector-analytics/)
+Three projects have been developed for this demonstrator. What is presented here is their state as of May 5th, 2017, and how to use/execute them locally. The Datacore Playground and Ozwillo OzEnergy projects also rely on another project, the [Ozwillo Datacore](https://github.com/ozwillo/ozwillo-datacore).
+
+## [OCCInterface](https://github.com/occiware/OCCInterface)
+
+OCCInterface is a generic application that lets you explore and modify the resources of an OCCI server.
+
+Its aims are multiple:
+- give a productivity tool to developers calling the OCCI API
+- easily manage and explore resources of an OCCI server
+- vulgarize, explain OCCI to newcomers, diffuse the OCCI way of thinking
+- be an (executable) reference documentation of capabilities of an OCCI implementation or of an integration of OCCI clouds, thanks to [executable REST samples](https://github.com/occiware/OCCInterface/blob/master/src/readings/GettingStarted.md).
+
+_[Live Demo on Heroku](http://occinterface.herokuapp.com/)_
+
+### Executing the Occinterface Demo
+
+Simply follow the instructions available on the [Github repository](https://github.com/occiware/OCCInterface).
+
+## [Datacore Playground - Linked Data server on Docker optimized for analytics](https://github.com/occiware/occiware-ozwillo/blob/master/connector-analytics/)
 
 For starters, let's get our dev environment set up and ready to go. If you haven't already done that, go to [the setup page](http://occiware.github.io/content/developer-guides/snapshot/studio-setting-up-the-environment.html).
 
@@ -29,58 +47,36 @@ First off, clone the demo repository : [https://github.com/occiware/occiware-ozw
 
 Then, follow the instructions written in the [README.md file](https://github.com/occiware/occiware-ozwillo/blob/master/connector-analytics/README.md).
 
-> NDLR : Missing demo screenshots start slide number in "Prerequisites" section. Isn't it the slide n°39 ?
++ NDLR : Missing demo screenshots start slide number in "Prerequisites" section. Isn't it the slide n°39 ?
 
-> NDLR : Add command to first shell script to install virtualbox, because at this point, the user only is supposed to have installed Occi-Studio (and therefore java and maven too).
++ NDLR : Add command to first shell script to install virtualbox, because at this point, the user only is supposed to have installed Occi-Studio (and therefore java and maven too).
 
-> NDLR : As for Docker the Docker install, the instructions are outdated because the versioning and installation process have completely changed since march 2017 ! It is better to follow the recommended steps in the [Docker Documentation - Installation for Ubuntu](https://docs.docker.com/engine/installation/linux/ubuntu/).
-
-### Questions about the demo :
-
-[Marc Dutoo's presentation on Youtube - Demonstration](https://youtu.be/HuDEbpC0eSw?t=713).
-
-+ In the Erocci repo, why is the LinkedData.occie file not in the same format in the video and in the repository (currently, this is XML).
-
-+ Do you have a video of a complete demonstration (with launch of Ozwillo Datacore Playground and Ozwillo OzEnergy) ?
-
-+ Do you know of [Rancher](http://rancher.com/rancher/) ?
-
-### Other projects
-
-The [Ozwillo Datacore](https://github.com/ozwillo/ozwillo-datacore) Datacore is a project that isn't directly linked to Occiware, but this demo relies on it.
++ NDLR : As for Docker the Docker install, the instructions are outdated because the versioning and installation process have completely changed since march 2017 ! It is better to follow the recommended steps in the [Docker Documentation - Installation for Ubuntu](https://docs.docker.com/engine/installation/linux/ubuntu/).
 
 ## [Ozwillo Ozenergy](https://github.com/ozwillo/ozwillo-ozenergy)
 
-OzEnergy is an energy consumption monitoring application meant to use the capabilities provided by OCCI to scale way up and offer data monitoring capabilities ranging from the very consumers, to providers and territories alike.
+OzEnergy is an energy consumption monitoring application meant to use the capabilities provided by OCCI to scale way up and offer data monitoring capabilities ranging from the very consumers, to providers and even entire countries/territories.
 
 ### Executing the Ozenergy Demo
 
 Simply follow the instructions available on the [Github repository](https://github.com/ozwillo/ozwillo-ozenergy), keeping in mind the few following details that are not so clear :
 
-> + For the node installation, it is highly recommended to use NVM, just like it's the OCCInterface proposes.
++ For the node installation, it is highly recommended to use NVM, the same the OCCInterface does.
 
-> + A priori, it is not necessary to install Scala separately, since sbt can install the most appropriate version itself.
++ A priori, it is not necessary to install Scala separately, since sbt can install the most appropriate version itself.
 
-> + Maven and MongoDB are to be installed through command line (sudo apt-get install maven mongodb).
++ Maven and MongoDB are to be installed through command line
 
-> + You can extract the Spark archive in your home directory or anywhere, for that matter, but don't forget to add the $SPARK_HOME environment variable by adding at the end of your ~/.bashrc file : "export SPARK_HOME=<YOUR PATH TO THE EXTRACTED SPARK DIRECTORY>", for example in the demo VM : "export SPARK_HOME=/home/occidemo/Bureau/Demo/Softs/spark-1.6.1-bin-hadoop2.6".
+  sudo apt-get install maven mongodb
 
-> + The command "git clone git@github.com:ozwillo/ozwillo-java-spring-integration.git" is not working, use "git clone https://github.com/ozwillo/ozwillo-java-spring-integration.git" instead.
++ You can extract the Spark archive in your home directory or anywhere, for that matter, but don't forget to add the $SPARK_HOME environment variable by adding at the end of your ~/.bashrc file : "export SPARK_HOME=<YOUR PATH TO THE EXTRACTED SPARK DIRECTORY>", for example in the demo VM : "export SPARK_HOME=/home/occidemo/Bureau/Demo/Softs/spark-1.6.1-bin-hadoop2.6".
 
-> + The "First open the build.sbt file in the and replace oz-energy-aggregations subproject '/home/charge' by your own home directory." is deprecated.
++ The command "git clone git@github.com:ozwillo/ozwillo-java-spring-integration.git" will not work using git through ssh and have an authorized SSH key, so use HTTPS instead : "git clone https://github.com/ozwillo/ozwillo-java-spring-integration.git".
 
-> + Same with the "then adapt it as needed, notably set spark.home if you haven't set the SPARK_HOME environment variable." line if you have set the SPARK_HOME environment variable as told above.
++ The "First open the build.sbt file in the and replace oz-energy-aggregations subproject '/home/charge' by your own home directory." is deprecated.
 
-> + In the end "mvn clean package" fails because many tests are failing. What might cause this ?
++ Same with the "then adapt it as needed, notably set spark.home if you haven't set the SPARK_HOME environment variable." line if you have set the SPARK_HOME environment variable as told above.
 
-> + And finally, even though "mvn clean package" fails, we are able to successully run "mvn spring-boot:run" and open the webapp in the browser, but no graph nor data is displayed, probably because of the previous command's failure.
++ In the end "mvn clean package" fails because many tests are failing. Cause : unknown.
 
-## [OCCInterface](https://github.com/occiware/OCCInterface)
-
-OCCInterface is a generic application that lets you explore and modify the resources of an OCCI server, regardless of what OCCI information we are talking about.
-
-_[Demo en live sur Heroku](http://occinterface.herokuapp.com/)_
-
-### Executing the Occinterface Demo
-
-Simply follow the instructions available on the [Github repository](https://github.com/occiware/OCCInterface).
++ And finally, even though "mvn clean package" fails, we are able to successully run "mvn spring-boot:run" and open the webapp in the browser, but no graph nor data is displayed, probably because of the previous command's failure.

@@ -8,9 +8,8 @@ released: false
 
 ## OCCI-Studio
 
-The Eclipse-based studio.
+Before checking out any of the guides below, be sure to read : [Installing OCCI-Studio / Setting up the dev environment](studio-setting-up-the-environment.html)
 
-* [Setting up the environment](studio-setting-up-the-environment.html)
 * [Creating a Code Generator](studio-creating-a-code-generator.html)
 * [Creating a Java Connector](studio-creating-a-java-connector.html)
 * [Creating a Sirius Example](studio-creating-a-sirius-example.html)
