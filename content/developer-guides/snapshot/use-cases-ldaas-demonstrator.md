@@ -11,7 +11,11 @@ released: false
 
 Three projects have been developed for this demonstrator. What is presented here is their state as of May 5th, 2017, and how to use/execute them locally. The Datacore Playground and Ozwillo OzEnergy projects also rely on another project, the [Ozwillo Datacore](https://github.com/ozwillo/ozwillo-datacore).
 
+We plan on dockerizing all this for easier local testing, but in the meantime, if you want to run them locally, we recommend that you use a Gnu/Linux system, especially an Ubuntu-based one, otherwise, you will have to adapt the commands to your own operating system.
+
 ## [OCCInterface](https://github.com/occiware/OCCInterface)
+
+_Presentation Excerpt_ :
 
 OCCInterface is a generic application that lets you explore and modify the resources of an OCCI server.
 
@@ -29,53 +33,37 @@ Simply follow the instructions available on the [Github repository](https://gith
 
 ## [Datacore Playground - Linked Data server on Docker optimized for analytics](https://github.com/occiware/occiware-ozwillo/blob/master/connector-analytics/)
 
-For starters, let's get our dev environment set up and ready to go. If you haven't already done that, go to [the setup page](http://occiware.github.io/content/developer-guides/snapshot/studio-setting-up-the-environment.html).
-
-You can either choose to install the project's Eclipse distribution, CloudDesigner (Cf. the page's first section), or if you already have a preinstalled version of Eclipse you might prefer to set it up by hand (Cf. sections 2 to 4).
-
 _Presentation Excerpt_ :
 
-// TODO : Make it more clear - What does this app do actually ?
+This demo showcases OCCIware Studio deploying a complete, working Ozwillo Datacore cluster (one Java and 3 mongo replica nodes) on Docker both locally and on a remote Open Stack VM, and developing a custom OCCI extension (including designer and connector) for Linked Data that allows to publish data projects and let them use a specific mongo secondary rather than the whole cluster (typically for read-heavy queries such as for analytics). This last point is achieved by visually linking OCCI Resources across Cloud layers : from Linked Data as a Service (LDaaS) to Infrastructure as a Service (IaaS).
 
-"This demo showcases OCCIware Studio deploying a complete, working Ozwillo Datacore cluster (one Java and 3 mongo replica nodes) on Docker both locally and on a remote Open Stack VM, and developing a custom OCCI extension (including designer and connector) for Linked Data that allows to publish data projects and let them use a specific mongo secondary rather than the whole cluster (typically for read-heavy queries such as for analytics). This last point is achieved by visually linking OCCI Resources across Cloud layers : from Linked Data as a Service (LDaaS) to Infrastructure as a Service (IaaS)."
+_[Live Demo on Ozwillo Preprod](https://data.ozwillo-preprod.eu/)_
+
+You will need to contact the app maintainer, Marc Dutoo (mdutoo on Github), to get an access to it. It is rather recommended to execute it locally.
 
 ### Executing the Linked Data Demo
 
-Once you have CloudDesigner up and running, be it as a standalone application or within another Eclipse instance, let's test it with a demo.
+For starters, let's get our dev environment set up and ready to go. If you haven't already done that, go to [the setup page](http://occiware.github.io/content/developer-guides/snapshot/studio-setting-up-the-environment.html).
+
+Make sure you have both installed a "Host Eclipse" and that you have a "Guest Eclipse" opened in it. For easier use, we recommend you use
 
 First off, clone the demo repository : [https://github.com/occiware/occiware-ozwillo.git](https://github.com/occiware/occiware-ozwillo.git).
 
-Then, follow the instructions written in the [README.md file](https://github.com/occiware/occiware-ozwillo/blob/master/connector-analytics/README.md).
-
-+ NDLR : Missing demo screenshots start slide number in "Prerequisites" section. Isn't it the slide n°39 ?
-
-+ NDLR : Add command to first shell script to install virtualbox, because at this point, the user only is supposed to have installed Occi-Studio (and therefore java and maven too).
-
-+ NDLR : As for Docker the Docker install, the instructions are outdated because the versioning and installation process have completely changed since march 2017 ! It is better to follow the recommended steps in the [Docker Documentation - Installation for Ubuntu](https://docs.docker.com/engine/installation/linux/ubuntu/).
+Then, follow the instructions written in this [README.md file](https://github.com/occiware/occiware-ozwillo/blob/master/connector-analytics/README.md).
 
 ## [Ozwillo Ozenergy](https://github.com/ozwillo/ozwillo-ozenergy)
 
+_Presentation Excerpt_ :
+
 OzEnergy is an energy consumption monitoring application meant to use the capabilities provided by OCCI to scale way up and offer data monitoring capabilities ranging from the very consumers, to providers and even entire countries/territories.
+
+_Live Demo Unavailable_
 
 ### Executing the Ozenergy Demo
 
-Simply follow the instructions available on the [Github repository](https://github.com/ozwillo/ozwillo-ozenergy), keeping in mind the few following details that are not so clear :
+Simply follow the instructions available on the [Github repository](https://github.com/ozwillo/ozwillo-ozenergy).
 
-+ For the node installation, it is highly recommended to use NVM, the same the OCCInterface does.
-
-+ A priori, it is not necessary to install Scala separately, since sbt can install the most appropriate version itself.
-
-+ Maven and MongoDB are to be installed through command line
-
-  sudo apt-get install maven mongodb
-
-+ You can extract the Spark archive in your home directory or anywhere, for that matter, but don't forget to add the $SPARK_HOME environment variable by adding at the end of your ~/.bashrc file : "export SPARK_HOME=<YOUR PATH TO THE EXTRACTED SPARK DIRECTORY>", for example in the demo VM : "export SPARK_HOME=/home/occidemo/Bureau/Demo/Softs/spark-1.6.1-bin-hadoop2.6".
-
-+ The command "git clone git@github.com:ozwillo/ozwillo-java-spring-integration.git" will not work using git through ssh and have an authorized SSH key, so use HTTPS instead : "git clone https://github.com/ozwillo/ozwillo-java-spring-integration.git".
-
-+ The "First open the build.sbt file in the and replace oz-energy-aggregations subproject '/home/charge' by your own home directory." is deprecated.
-
-+ Same with the "then adapt it as needed, notably set spark.home if you haven't set the SPARK_HOME environment variable." line if you have set the SPARK_HOME environment variable as told above.
+Known problems :
 
 + In the end "mvn clean package" fails because many tests are failing. Cause : unknown.
 
