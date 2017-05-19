@@ -9,27 +9,9 @@ released: false
 
 # Demonstrations
 
-Three projects have been developed for this demonstrator. What is presented here is their state as of May 5th, 2017, and how to use/execute them locally. The Datacore Playground and Ozwillo OzEnergy projects also rely on another project, the [Ozwillo Datacore](https://github.com/ozwillo/ozwillo-datacore).
+Two projects have been developed for this demonstrator. What is presented here is their state as of May 5th, 2017, and how to use/execute them locally. The Datacore Playground and Ozwillo OzEnergy projects also rely on another project, the [Ozwillo Datacore](https://github.com/ozwillo/ozwillo-datacore).
 
 We plan on dockerizing all this for easier local testing, but in the meantime, if you want to run them locally, we recommend that you use a Gnu/Linux system, especially an Ubuntu-based one, otherwise, you will have to adapt the commands to your own operating system.
-
-## [OCCInterface](https://github.com/occiware/OCCInterface)
-
-_Presentation Excerpt_ :
-
-OCCInterface is a generic application that lets you explore and modify the resources of an OCCI server.
-
-Its aims are multiple:
-- give a productivity tool to developers calling the OCCI API
-- easily manage and explore resources of an OCCI server
-- vulgarize, explain OCCI to newcomers, diffuse the OCCI way of thinking
-- be an (executable) reference documentation of capabilities of an OCCI implementation or of an integration of OCCI clouds, thanks to [executable REST samples](https://github.com/occiware/OCCInterface/blob/master/src/readings/GettingStarted.md).
-
-_[Live Demo on Heroku](http://occinterface.herokuapp.com/)_
-
-### Executing the Occinterface Demo
-
-Simply follow the instructions available on the [Github repository](https://github.com/occiware/OCCInterface).
 
 ## [Datacore Playground - Linked Data server on Docker optimized for analytics](https://github.com/occiware/occiware-ozwillo/blob/master/connector-analytics/)
 
