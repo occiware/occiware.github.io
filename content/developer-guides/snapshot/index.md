@@ -17,7 +17,7 @@ Before checking out any of the guides below, be sure to read : [Installing OCCI-
 ## Runtimes
 
 * [MartServer](https://github.com/occiware/MartServer) : headless implementation of the Occi-Studio in Java, roughly equivalent to Erocci.
-* [Erocci](http://erocci.ow2.org) : scalable, multi protocol, multi backend OCCI runtime platform. No longer maintained.
+* [Erocci](http://erocci.ow2.org) : scalable, multi protocol, multi backend OCCI runtime platform.
 * [erocci-dbus-java](http://github.com/occiware/erocci-dbus-java) : runtime server for Studio connectors, allowing to expose them as OCCI through erocci (being an erocci java backend).
 
 ## Use cases

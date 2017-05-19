@@ -18,7 +18,7 @@ If you want to know more, the latest presentation on Occiware made by Marc Dutoo
 
 You might also want to read the overall presentation by Marc Dutoo : [Eclipsecon 2016 - Occiware, a cloud api to rule them all](https://fr.slideshare.net/mdutoo/eclipsecon-2016-occiware-a-cloud-api-to-rule-them-all).
 
-Though [Erocci](http://erocci.ow2.org/) is no longer used and has been replaced by [MartServer](https://github.com/occiware/MartServer), it might help you understand what it is about, hence here is a link to the [presentation's video of Erocci](https://www.youtube.com/watch?v=cJszIZP7_N8) that followed Marc Dutoo's talk right above.
+Watching the [presentation's video of Erocci](https://www.youtube.com/watch?v=cJszIZP7_N8) that followed Marc Dutoo's talk might help you to understand more about OCCI.
 
 To better understand what OCCI is, the best thing to do would be to take a quick look at the [specification of the norm](http://occi-wg.org/about/specification/).
 
@@ -41,4 +41,4 @@ See the ["Setting up the Environment"](/content/developer-guides/snapshot/studio
 
 ### [MartServer](https://github.com/occiware/MartServer)
 
-To put it simply, the MartServer is a headless implementation of the Occi-Studio : no Eclipse tools or bindings here. It is a "for-prod" project. It replaces the [Erocci](https://github.com/erocci/erocci) Erlang implementation, as the Erocci project has been more or less abandonned since september 2016.
+To put it simply, the MartServer is a headless implementation of the Occi-Studio : no Eclipse tools or bindings here. It is a "for-prod" project. It is a simpler Java equivalent to the [Erocci](https://github.com/erocci/erocci) Erlang implementation, though Erocci is more scalable thanks to the very nature of the Erlang language.
