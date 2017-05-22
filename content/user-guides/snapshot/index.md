@@ -26,9 +26,8 @@ The studio is based on Eclipse.
 
 ## Runtime
 
-* [MartServer](https://github.com/occiware/MartServer) : headless implementation of the Occi-Studio in Java, roughly equivalent to Erocci.
-* [Erocci](http://erocci.ow2.org) : scalable, multi protocol, multi backend OCCI runtime platform.
-* [erocci-dbus-java](http://github.com/occiware/erocci-dbus-java) : runtime server for Studio connectors, allowing to expose them as OCCI through erocci (being an erocci java backend).
+* [MartServer](https://github.com/occiware/MartServer) : pure java, multi protocol, OCCI runtime platform. It can be understood as a headless implementation of the Occi-Studio in Java, roughly equivalent to Erocci.
+* [Erocci](http://erocci.ow2.org) : scalable, multi protocol, multi backend OCCI runtime platform. Its [erocci-dbus-java](http://github.com/occiware/erocci-dbus-java) Java backend makes it a runtime server for Studio connectors, allowing to expose them as OCCI through erocci.
 * [OCCInterface (OCCI playground)](runtime-occinterface.html) : OCCInterface is a generic application that lets you explore and modify the resources of an OCCI server.
 * [Exposing a connector as an OCCI HTTP API](runtime-expose-a-connector-as-OCCI-HTTP.html) : Explication based on the Linked Data demo.
 
